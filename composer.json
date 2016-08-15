@@ -1,0 +1,9 @@
+{
+  "name": "janxb/php-lxd-dns",
+  "require": {
+    "yswery/dns": "dev-master"
+  },
+  "require-dev": {
+    "clue/phar-composer": "^1.0"
+  }
+}
