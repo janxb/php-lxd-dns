@@ -9,9 +9,12 @@ class LxdSocketResolver extends AbstractStorageProvider
 	public function get_answer($question)
 	{
 		$hostname = rtrim($question[0]['qname'], '.');
+
+		$hostname = str_replace('.lxd', '', $hostname);
+
 		$data = $this->loadContainerData($hostname);
 
-		if ($data->type === 'error' || $data->metadata->status !== 'Running') {
+		if ($data == null || $data->type === 'error' || $data->metadata->status !== 'Running') {
 			return [];
 		}
 
