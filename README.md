@@ -20,3 +20,5 @@ Now the project is packaged into one `.phar` file,
 which you can copy anywhere you want.
 
 *Hint: When you are in the project directory, you can also just run `sudo php index.php`.*
+
+For more LXD administration scripts, take a look at [portforward](https://github.com/janxb/ServerUtils/blob/master/portforward) or [publishlxd](https://github.com/janxb/ServerUtils/blob/master/portforward)
