@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vendor/bin/phar-composer build .
+php -d phar.readonly=off vendor/bin/phar-composer build .
