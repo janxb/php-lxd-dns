@@ -1,10 +1,10 @@
 <?php
 require "vendor/autoload.php";
 
-$recursiveProvider = new yswery\DNS\RecursiveProvider();
 $lxdSocketResolver = new LxdSocketResolver();
 
-$stackableResolver = new yswery\DNS\StackableResolver(array($lxdSocketResolver, $recursiveProvider));
+$bindAddress = '127.100.1.1';
 
-$dns = new yswery\DNS\Server($stackableResolver, '127.100.1.1');
+echo 'dns server starting on interface ' . $bindAddress . PHP_EOL;
+$dns = new yswery\DNS\Server($lxdSocketResolver, $bindAddress);
 $dns->start();
