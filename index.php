@@ -1,14 +1,10 @@
 <?php
 require "vendor/autoload.php";
 
-
-// Recursive provider acting as a fallback to the JsonStorageProvider
 $recursiveProvider = new yswery\DNS\RecursiveProvider();
+$lxdSocketResolver = new LxdSocketResolver();
 
-// $stackableResolver = new yswery\DNS\StackableResolver(array($jsonStorageProvider, $recursiveProvider));
+$stackableResolver = new yswery\DNS\StackableResolver(array($lxdSocketResolver, $recursiveProvider));
 
-// Creating a new instance of our class
-$dns = new yswery\DNS\Server($recursiveProvider);
-
-// Starting our DNS server
+$dns = new yswery\DNS\Server($stackableResolver, '127.100.1.1');
 $dns->start();
