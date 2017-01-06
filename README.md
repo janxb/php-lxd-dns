@@ -21,4 +21,4 @@ which you can copy anywhere you want.
 
 *Hint: When you are in the project directory, you can also just run `sudo php index.php`.*
 
-For more LXD administration scripts, take a look at [portforward](https://github.com/janxb/ServerUtils/blob/master/lxd-portforward) or [publishlxd](https://github.com/janxb/ServerUtils/blob/master/lxd-publish)
+For more LXD administration scripts, take a look at [my ServerUtils github repository](https://github.com/janxb/ServerUtils)
